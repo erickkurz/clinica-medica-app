@@ -100,3 +100,12 @@ make
 
 Este app é a evolução do sistema de terminal:
 👉 [Clínica Médica — C++ Terminal](https://github.com/KrzDev-debug/clinica-medica-cpp)
+
+---
+
+## ⬇️ Download
+
+Baixe o executável para Windows (não precisa instalar):  
+👉 [Clique aqui para baixar](https://drive.google.com/file/d/1kwE7AAAiGASjReXjTGilUtVHtz5o-2w0/view?usp=sharing)
+
+> **Requisito:** Windows 64-bit. Basta extrair o `.zip` e executar `ClinicaMedica.exe`.
