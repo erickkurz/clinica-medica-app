@@ -1,6 +1,6 @@
 # 🏥 Clínica Médica App — Qt/C++
 
-Aplicação desktop com **interface gráfica** para gerenciamento de atendimento de clínica médica, desenvolvida como evolução do [sistema de terminal em C++](https://github.com/KrzDev-debug/clinica-medica-cpp).
+Aplicação desktop com **interface gráfica** para gerenciamento de atendimento de clínica médica, desenvolvida como evolução do [sistema de terminal em C++](https://github.com/erickkurz/clinica-medica-cpp).
 
 Projeto desenvolvido durante o curso de **Licenciatura em Computação** no **Instituto Federal Sul-Rio-Grandense — Campus Pelotas**.
 
@@ -11,7 +11,14 @@ Projeto desenvolvido durante o curso de **Licenciatura em Computação** no **In
 Esta aplicação é a versão visual do sistema de clínica médica originalmente desenvolvido em terminal puro. Mantendo as mesmas estruturas de dados implementadas manualmente (lista, fila e pilha), o projeto foi reescrito com interface gráfica usando o framework **Qt 6**.
 
 ---
+## ⬇️ Download
 
+Baixe o executável para Windows (não precisa instalar):  
+👉 [Clique aqui para baixar](https://drive.google.com/file/d/1kwE7AAAiGASjReXjTGilUtVHtz5o-2w0/view?usp=sharing)
+
+> **Requisito:** Windows 64-bit. Basta extrair o `.zip` e executar `ClinicaMedica.exe`.
+
+---
 ## 🖥️ Interface
 
 A janela principal exibe em tempo real:
@@ -99,13 +106,6 @@ make
 ## 🔗 Projeto Anterior
 
 Este app é a evolução do sistema de terminal:
-👉 [Clínica Médica — C++ Terminal](https://github.com/KrzDev-debug/clinica-medica-cpp)
+👉 [Clínica Médica — C++ Terminal](https://github.com/erickkurz/clinica-medica-cpp)
 
 ---
-
-## ⬇️ Download
-
-Baixe o executável para Windows (não precisa instalar):  
-👉 [Clique aqui para baixar](https://drive.google.com/file/d/1kwE7AAAiGASjReXjTGilUtVHtz5o-2w0/view?usp=sharing)
-
-> **Requisito:** Windows 64-bit. Basta extrair o `.zip` e executar `ClinicaMedica.exe`.
