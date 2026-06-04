@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1600</width>
+    <height>950</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Sistema de Atendimento - Clínica Médica</string>
+  </property>
+
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="spacing">
+     <number>10</number>
+    </property>
+    <property name="leftMargin">
+     <number>12</number>
+    </property>
+    <property name="topMargin">
+     <number>12</number>
+    </property>
+    <property name="rightMargin">
+     <number>12</number>
+    </property>
+    <property name="bottomMargin">
+     <number>12</number>
+    </property>
+
+    <!-- GRUPO CADASTRO -->
+    <item>
+     <widget class="QGroupBox" name="groupCadastro">
+      <property name="title">
+       <string>Cadastro de Pacientes</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <property name="leftMargin"><number>12</number></property>
+       <property name="topMargin"><number>16</number></property>
+       <property name="rightMargin"><number>12</number></property>
+       <property name="bottomMargin"><number>12</number></property>
+       <property name="horizontalSpacing"><number>10</number></property>
+       <property name="verticalSpacing"><number>8</number></property>
+
+       <item row="0" column="0">
+        <widget class="QLabel" name="labelCodigo">
+         <property name="text"><string>Código</string></property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="editCodigo">
+         <property name="placeholderText"><string>Ex: 101</string></property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QLabel" name="labelNome">
+         <property name="text"><string>Nome</string></property>
+        </widget>
+       </item>
+       <item row="0" column="3">
+        <widget class="QLineEdit" name="editNome">
+         <property name="placeholderText"><string>Nome completo</string></property>
+        </widget>
+       </item>
+       <item row="0" column="4">
+        <widget class="QLabel" name="labelIdade">
+         <property name="text"><string>Idade</string></property>
+        </widget>
+       </item>
+       <item row="0" column="5">
+        <widget class="QLineEdit" name="editIdade">
+         <property name="placeholderText"><string>Ex: 30</string></property>
+        </widget>
+       </item>
+
+       <item row="1" column="0">
+        <widget class="QPushButton" name="btnCadastrar">
+         <property name="text"><string>Cadastrar</string></property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QPushButton" name="btnAlterar">
+         <property name="text"><string>Alterar</string></property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QPushButton" name="btnRemover">
+         <property name="text"><string>Remover</string></property>
+        </widget>
+       </item>
+       <item row="1" column="3">
+        <widget class="QPushButton" name="btnBuscar">
+         <property name="text"><string>Buscar</string></property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+
+    <!-- GRUPO CONTROLE DE ATENDIMENTO -->
+    <item>
+     <widget class="QGroupBox" name="groupFila">
+      <property name="title">
+       <string>Controle de Atendimento</string>
+      </property>
+      <layout class="QHBoxLayout" name="filaLayout">
+       <property name="leftMargin"><number>12</number></property>
+       <property name="topMargin"><number>16</number></property>
+       <property name="rightMargin"><number>12</number></property>
+       <property name="bottomMargin"><number>12</number></property>
+       <property name="spacing"><number>10</number></property>
+
+       <item>
+        <widget class="QCheckBox" name="checkPrioritario">
+         <property name="text"><string>Prioritário</string></property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnInserirFila">
+         <property name="text"><string>Inserir na Fila</string></property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnChamar">
+         <property name="text"><string>Chamar Paciente</string></property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnUltimo">
+         <property name="text"><string>Último Atendimento</string></property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnDesfazer">
+         <property name="text"><string>Desfazer Atendimento</string></property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="spacerFila">
+         <property name="orientation"><enum>Qt::Horizontal</enum></property>
+         <property name="sizeHint" stdset="0">
+          <size><width>40</width><height>20</height></size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </item>
+
+    <!-- LINHA PRINCIPAL: Pacientes | Fila Prioritária + Fila Normal -->
+    <item>
+     <layout class="QHBoxLayout" name="layoutPrincipal">
+      <property name="spacing"><number>10</number></property>
+
+      <!-- Tabela Pacientes -->
+      <item>
+       <widget class="QGroupBox" name="groupPacientes">
+        <property name="title"><string>Pacientes Cadastrados</string></property>
+        <layout class="QVBoxLayout" name="layoutPacientes">
+         <property name="leftMargin"><number>8</number></property>
+         <property name="topMargin"><number>16</number></property>
+         <property name="rightMargin"><number>8</number></property>
+         <property name="bottomMargin"><number>8</number></property>
+         <item>
+          <widget class="QTableWidget" name="tablePacientes">
+           <column>
+            <property name="text"><string>Código</string></property>
+           </column>
+           <column>
+            <property name="text"><string>Nome</string></property>
+           </column>
+           <column>
+            <property name="text"><string>Idade</string></property>
+           </column>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+
+      <!-- Fila Prioritária + Fila Normal empilhadas -->
+      <item>
+       <layout class="QVBoxLayout" name="layoutFilas">
+        <property name="spacing"><number>10</number></property>
+
+        <item>
+         <widget class="QGroupBox" name="groupFilaPrioritaria">
+          <property name="title"><string>Fila Prioritária</string></property>
+          <layout class="QVBoxLayout" name="layoutFilaPrioritaria">
+           <property name="leftMargin"><number>8</number></property>
+           <property name="topMargin"><number>16</number></property>
+           <property name="rightMargin"><number>8</number></property>
+           <property name="bottomMargin"><number>8</number></property>
+           <item>
+            <widget class="QTableWidget" name="tableFilaPrioritaria">
+             <column>
+              <property name="text"><string>Código</string></property>
+             </column>
+             <column>
+              <property name="text"><string>Nome</string></property>
+             </column>
+             <column>
+              <property name="text"><string>Idade</string></property>
+             </column>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+
+        <item>
+         <widget class="QGroupBox" name="groupFilaNormal">
+          <property name="title"><string>Fila Normal</string></property>
+          <layout class="QVBoxLayout" name="layoutFilaNormal">
+           <property name="leftMargin"><number>8</number></property>
+           <property name="topMargin"><number>16</number></property>
+           <property name="rightMargin"><number>8</number></property>
+           <property name="bottomMargin"><number>8</number></property>
+           <item>
+            <widget class="QTableWidget" name="tableFilaNormal">
+             <column>
+              <property name="text"><string>Código</string></property>
+             </column>
+             <column>
+              <property name="text"><string>Nome</string></property>
+             </column>
+             <column>
+              <property name="text"><string>Idade</string></property>
+             </column>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+
+       </layout>
+      </item>
+
+     </layout>
+    </item>
+
+    <!-- HISTÓRICO -->
+    <item>
+     <widget class="QGroupBox" name="groupHistorico">
+      <property name="title"><string>Histórico de Atendimentos</string></property>
+      <layout class="QVBoxLayout" name="layoutHistorico">
+       <property name="leftMargin"><number>8</number></property>
+       <property name="topMargin"><number>16</number></property>
+       <property name="rightMargin"><number>8</number></property>
+       <property name="bottomMargin"><number>8</number></property>
+       <item>
+        <widget class="QTableWidget" name="tableHistorico">
+         <column>
+          <property name="text"><string>Código</string></property>
+         </column>
+         <column>
+          <property name="text"><string>Nome</string></property>
+         </column>
+         <column>
+          <property name="text"><string>Idade</string></property>
+         </column>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+
+    <!-- ÚLTIMO ATENDIMENTO -->
+    <item>
+     <widget class="QGroupBox" name="groupUltimo">
+      <property name="title"><string>Último Atendimento</string></property>
+      <layout class="QHBoxLayout" name="layoutUltimo">
+       <property name="leftMargin"><number>12</number></property>
+       <property name="topMargin"><number>16</number></property>
+       <property name="rightMargin"><number>12</number></property>
+       <property name="bottomMargin"><number>12</number></property>
+       <item>
+        <widget class="QLabel" name="labelUltimoPaciente">
+         <property name="text"><string>Nenhum atendimento registrado</string></property>
+         <property name="styleSheet">
+          <string>font-size: 11pt; color: #93c5fd;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="spacerUltimo">
+         <property name="orientation"><enum>Qt::Horizontal</enum></property>
+         <property name="sizeHint" stdset="0">
+          <size><width>40</width><height>20</height></size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </item>
+
+   </layout>
+  </widget>
+
+  <widget class="QStatusBar" name="statusbar"/>
+
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
